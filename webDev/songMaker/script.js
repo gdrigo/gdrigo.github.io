@@ -15,7 +15,18 @@ function Sound(audio="", duration=0, buttonID="", image = "", zone = "", alt = "
 //Create Sound objects
 let monkey = new Sound("assets/sounds/monkeyCry.mp3", 4300, "#monkeyButton", "monkey.png", "#monkeyZone" ); 
 // let monkey = new Sound("assets/sounds/monkeyCry.mp3", 4300, "#monkeyButton");
-let bird = new Sound("assets/sounds/birds.mp3", 4552, "#birdButton", "monkey.png", "#monkeyZone");
+let bird = new Sound("assets/sounds/birds.mp3", 4552, "#birdButton", "bird.png", "#birdZone");
+let tiger = new Sound("assets/sounds/tiger.mp3", 4552, "#tigerButton", "tiger.png", "#tigerZone");
+let rain = new Sound("assets/sounds/rain.mp3", 4552, "#rainButton", "rain.png", "#rainZone");
+let coconut = new Sound("assets/sounds/coconut.mp3", 4552, "#coconutButton", "coconut.png", "#coconutZone");
+let frog = new Sound("assets/sounds/frog.mp3", 4552, "#frogButton", "frog.png", "#frogZone");
+let snake = new Sound("assets/sounds/snake.mp3", 4552, "#snakeButton", "snake.png", "#snakeZone");
+let insect = new Sound("assets/sounds/insect.mp3", 4552, "#insectButton", "insect.png", "#insectZone");
+let owl = new Sound("assets/sounds/owl.mp3", 4552, "#owlButton", "owl.png", "#owlZone");
+let elephant= new Sound("assets/sounds/elephant.mp3", 4552, "#elephantButton", "elephant.png", "#elephantZone");
+
+
+
 
 
 //Adding single click actions. 
@@ -120,4 +131,3 @@ function clearZones() {
 function clearSong() {
     song.length = 0;
     $("#notes").empty();
-}
