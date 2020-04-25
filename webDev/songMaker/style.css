@@ -1,24 +1,33 @@
 body {
-	background-color: #fd6e8e;
+	background-color: white;
 	padding: 2vw;
-	background-image: url( "assets/icons/backgd2.png");
-	background-repeat: repeat-x;
-	/*background-size: cover;*/
 	color: white;
-	/*background-attachment: fixed;*/
-	/*background-size: cover;*/
 }
 
 .backgd {
+	width: 100vw;
+}
+
+#topHalfOfPage {
 	position: absolute;
-	width: 20vw;
-	height: auto;
+	top: 0vw;
+	left: 0vw;
+	background-image: url( "assets/icons/backgd2.png");
+	background-repeat: no-repeat;
+	width: 100vw;
+	background-size:100%;
+	height: 70vh;
+}
+
+#bottomHalfOfPage {
+	margin-top: 70vh;
+	height: 6vh;
+	border: white;
 }
 
 h3 {
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 5vh;
-	/*display: flex;*/
 	text-shadow: 1vw 1vh #fd6e8e;
 	text-align: center;
 	position: absolute;
@@ -35,16 +44,16 @@ transition: all 0.3s ease-in 0.5s;
 
 }
 .whiteRectangle {
-background-attachment: fixed;
-position: absolute;
-top: 2vw;
-left:0vw;
-background-color: white;
-width: 100vw;
-height: 8vw;
-display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+	background-attachment: fixed;
+	position: absolute;
+	top: 2vw;
+	left:0vw;
+	background-color: white;
+	width: 100vw;
+	height: 8vw;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 
 /*.whiteRectangle2 {
@@ -60,12 +69,10 @@ align-items: flex-end;
 z-index: -1;
 }*/
 
-/**/
-
 button {
-background-color: white;
-color: black;
-text-shadow: 0.1vw 0.1vw #fd6e8e;
+background-color: #fd6e8e;
+color: white;
+text-shadow: 0.1vw 0.1vw black;
 width:8vw;
 height: 2.5vw;
 margin: 0.2vw;
@@ -73,7 +80,6 @@ border-radius: 1vw;
 font-family: 'Berkshire Swash', cursive;
 font-size: 1.25vw;
 transition: all 0.5s ease 0s;
-/*padding: 5vw;*/
 }
 
 button:hover {
@@ -82,7 +88,7 @@ button:hover {
 	text-shadow: 0.1vw 0.1vw black;
 }
 .playClearButton {
-	background-color: #fd6e8e;
+	background-color: black;
 	color: white;
 	text-shadow: 0.1vw 0.1vw black;
 /*background-color: black;
@@ -90,24 +96,13 @@ color: white;
 text-shadow: 0.1vw 0.1vw #fd6e8e;*/
 }
 .playClearButton:hover {
-	background-color: white;
+	background-color: #fd6e8e;
 	color: black;
 	text-shadow: 0.1vw 0.1vw #fd6e8e;
-	background-color: black;
 	color: white;
 	text-shadow: 0.1vw 0.1vw #fd6e8e;
 }
-.row1 {
-	display: flex;
-	margin: 0.05vw;
-	justify-content: center;
-}
-.row2 {
-	display: flex;
-	margin: 0.05vw;
-	justify-content: center;
-}
-.row3 {
+.row1, .row2, .row3 {
 	display: flex;
 	margin: 0.05vw;
 	justify-content: center;
@@ -121,27 +116,27 @@ text-shadow: 0.1vw 0.1vw #fd6e8e;*/
 	flex-direction: column;
 }
 .soundIconGrid {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+
 	display: grid;
 	/*padding-top: 13vh;*/
-	grid-template-columns: repeat(10, 7.5vw);
-	grid-template-rows: repeat(5, 7.5vw);
+	grid-template-columns: repeat(10, 7vw);
+	grid-template-rows: repeat(4, 7vw);
 	padding-left: 10vw;
 	padding-right: 10vw;
 	padding-bottom: 2vh;
 }
 
-
-
 /*.soundIcon {
-background-color: white;
-opacity: 0.3;
+	background-color: white;
+	opacity: 0.3;
 }*/
 
 .staff {
 	display: grid;
 	grid-template-columns: 7.5vw 50vw;
 	grid-template-rows: repeat(1, 7.5vw);
-	margin-top: 4vh;
 	margin-left: 17vw;
 	padding-right: 10vw;
 	width: 50vw;
@@ -149,7 +144,7 @@ opacity: 0.3;
 	position: absolute;*/
 	background-image: url("assets/icons/staff.png");
 	background-repeat: repeat-x;
-	background-size: 20vw;
+	background-size: 50vw;
 	/*background-repeat: repeat-x;*/
 }
 

@@ -94,10 +94,6 @@ function addToSong(sound) {
 	soundIcon.setAttribute("height", "100%");     
 	soundIcon.setAttribute("alt", sound.alt);  
 	$("#notes").append(soundIcon); 
-
-//adds to staff
-// $("#notes").append("<li>Appended item</li>");
-
 }
 
 let delayBeforePlaying; //amount of time before each sound starts to play...will hold duration of prev sound in the sequence
