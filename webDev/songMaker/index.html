@@ -3,116 +3,26 @@
 
 <head>
    <title>Jungle Song Maker</title>
-   <link rel="shortcut icon" type="image/png" href=""/>
+   <link rel="shortcut icon" type="image/png" href="assets/icons/favicon1.png"/>
    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
    <meta charset="utf-8">
    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Notable&family=Rubik+Mono+One&family=Shrikhand&family=Titan+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    <link rel="stylesheet" type="text/css" href="style.css">
    <script src="script.js" defer></script>
 </head>
 
-<body>
-	<!-- <div class = "whiteRectangle">
-		<h3>Jungle Music Maker</h3>
-		<h5>Single Click - Plays Sound</h5>
-		<h5>Double Click = Adds sound to song</h5>
-	</div> -->
-
-
-	<!-- <img class = "backgd" src = "https://ih1.redbubble.net/image.188655194.3732/flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg">  -->
-
-	   
-	<div id="topHalfOfPage">
-
-	   <div class="soundIconGrid">
-
-	      <!-- ROW 1 BEGINS-->
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="monkeyZone"></div>
-	      <div></div>
-	      <div class="soundIcon" id="elephantZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="coconutZone"></div>
-	      <!-- ROW 1 ENDS -->
-	     
-	      <!-- ROW 2 BEGINS-->
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="insectZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="tigerZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <!-- ROW 2 ENDS -->
-
-	      <!-- ROW 3 BEGINS-->
-	      <div class="soundIcon" id="snakeZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="owlZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="birdZone"></div>
-	      <div></div>
-	      <!-- ROW 3 ENDS -->
-
-	      <!-- ROW 4 BEGINS-->
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div class="soundIcon" id="frogZone"></div>
-	      <div></div>
-	      <div class="soundIcon" id="rainZone"></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <!-- ROW 4 ENDS -->
-
-	   </div>
-
-	   <div class="staff">
-	       <img class = "treble" src="assets/icons/treble.png">
-	      <ul id="notes"></ul>
-	   </div>
-
-	</div>
-
-	<div id="bottomHalfOfPage">
-	   	<div class = "flexbox">
-	    	<div class = "row1">
-		         <!-- a grid might be ideal for the 6 and 4 button layouts -->
-		         <button id="monkeyButton">Monkey</button>
-		         <button id="birdButton">Bird</button>
-		         <button id="tigerButton">Tiger</button>
-		         <button id="rainButton">Rain</button>
-		         <button id="coconutButton">Coconut</button>
-		         <button id="frogButton">Frog</button>
-		         <br>
-	        </div>
-	        <div class = "row2">
-		         <button id="snakeButton">Snake</button>
-		         <button id="insectButton">Insect</button>
-		         <button id="owlButton">Owl</button>
-		         <button id="elephantButton">Elephant</button>
-		         <br>
-		         </div>
-		         <div class = "row3">
-		         <button class = "playClearButton" id="playbackButton">Play Song</button>
-		         <button class = "playClearButton" id="clearButton">Clear Song</button>
-	        </div>
-	   	</div>
-	</div> 
+<body id="introPgBody">
+	<h1 id="intropgTitle">Jungle Music Maker</h1>
+   <div id="introBox">
+	   	<p id="instructionsTitle">Instructions</p>
+	   	<p>Make your own Jungle Song!<br>Single click to listen and test sounds<br>Double click to add the sound to your song!<br>Go Bananas!</p>	
+	   	<!-- <button id="buttonToMainPg">Click to Enter the Jungle</button> -->
+	   	<a href="music.html"><button id="buttonToMainPg">Click to Enter the Jungle</button></a>
+   </div>
+   <!-- <button id="buttonToMainPg">Click to Enter the Jungle</button> -->
+ 
 
 </body>
 </html>
