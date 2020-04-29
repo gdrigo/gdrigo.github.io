@@ -1,0 +1,120 @@
+html {
+	font-family: 'Bungee', cursive;
+}
+
+body {
+	display: flex;
+	background-color: #8A2100;
+}
+
+p {
+	color: white;
+	text-align: center;
+	padding-left: 1vw;
+	font-size: 2vw;
+	opacity: 0.6;
+}
+
+
+.audioPlayer {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 59vw;
+	margin-left: 23vw;
+	margin-top:15vh;
+}
+
+#audioTag {
+	/*position: absolute;*/
+	/*top:0;
+	left:0;*/
+	width: 59vw;
+	/*margin-left: 5vw;*/
+	/*padding-top:20vh;*/
+	opacity: 0.6;
+}
+
+@media(max-width: 1200px) {
+ 	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+		width: 30vw;
+	}
+	#audioTag {
+		opacity: 0.6;
+	}
+}
+
+@media(max-width: 800px) {
+ 	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+		width: 50vw;
+	}
+	#audioTag {
+		opacity: 0.6;
+	}
+}
+
+@media(max-width: 700px) {
+ 	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+		width: 50vw;
+	}
+	#audioTag {
+		opacity: 0.6;
+	}
+}
+
+@media(max-width: 600px) {
+ 	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+		width: 50vw;
+	}
+	#audioTag {
+		opacity: 0.6;
+	}
+}
+
+
+@media(max-width: 500px) {
+ 	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+ 		margin-left: 30vw;
+		width: 53vw;
+	}
+	#audioTag {
+		margin-left: 0vw;
+		opacity: 0.6;
+	}
+}
+
+
+@media(max-width: 450px) {
+	p {
+		font-size: 3vh;
+	}
+ 	.audioPlayer, #audioTag {
+ 		margin-left: 20vw;
+		width: 60vw;
+	}
+	#audioTag {
+		margin-left: 0vw;
+		width: 65vw;
+		opacity: 0.6;
+	}
+}
+
+
+
+
+
