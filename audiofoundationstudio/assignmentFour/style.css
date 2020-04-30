@@ -21,17 +21,12 @@ p {
 	top:0;
 	left:0;
 	width: 59vw;
-	margin-left: 23vw;
+	margin-left: 20vw;
 	margin-top:15vh;
 }
 
 #audioTag {
-	/*position: absolute;*/
-	/*top:0;
-	left:0;*/
 	width: 59vw;
-	/*margin-left: 5vw;*/
-	/*padding-top:20vh;*/
 	opacity: 0.6;
 }
 
