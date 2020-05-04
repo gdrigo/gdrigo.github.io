@@ -1,0 +1,81 @@
+
+
+html {
+	font-family: 'Fredoka One', cursive;
+
+}
+
+body {
+	display: flex;
+	background-color: lightblue;
+	color: black;
+}
+
+.mainGrid {
+	display: grid;
+	grid-template-columns: 25vw 43vw 25vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.charClothes {
+	position: absolute;
+	bottom: 0;
+	margin-left: 5vw;
+}
+
+.box {
+	background-color: white;
+	border-radius: 15px;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-top: 5vh;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.questionBox {
+	
+}
+
+.historyBox {
+	max-height: 50vh;
+	/*overflow-y: scroll;*/
+}
+#historyList {
+	max-height: 35vh;
+	overflow-y: scroll;
+}
+
+#choices button {
+	display: block;
+	width: 20vw;
+}
+
+
+/*FOR CHOICE BUTTONS*/
+/* Style the buttons */
+.choiceBtn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .choiceBtn:hover {
+  background-color: #666;
+  color: white;
+}
+
+
+
