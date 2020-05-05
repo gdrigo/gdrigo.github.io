@@ -10,8 +10,8 @@ function Age(ageNum, stageOfLife, question, choices = []) {
 
 //Setting ages
 let ages = [];
-ages.push(new Age(0, "Baby", "What's your first action for this world?", ["Cry Up a Storm","Not a Thing","Having Regrets"]));
-ages.push(new Age(3, "Toddler", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(0, "Baby", "insertQuestioninsertQuestioninsertQuestion?", ["Choice1","Choice2","Choice3"]));
+ages.push(new Age(3, "Toddler", "insertQuestioninsertQuestion?", ["choice1","choice2","choice3"]));
 ages.push(new Age(7, "Child", "insertQuestion", ["choice1","choice2","choice3"]));
 ages.push(new Age(10, "Child", "insertQuestion", ["choice1","choice2","choice3"]));
 ages.push(new Age(13, "Teen", "insertQuestion", ["choice1","choice2","choice3"]));
@@ -31,19 +31,21 @@ let currAgeInd = 0;
 let currAge = ages[0].ageNum;
 
 function ageUp() {
-	updateHistory();
+	// updateHistory();
 	currAgeInd++;
 	currAge = ages[currAgeInd].ageNum; //updates age
 
 	if(currAgeInd < ages.length) { //there's still possible ages to live 
 		loadAgeSettings(currAge); //updates next question (changes customizable options)
+		$('#currAge').text(" " + currAge);
+		// updateHistory();
 	}
 	else { //kill them! hehehe
 		triggerDeath();
 	}
 }
 
-$('#ageUpButton').click(e => ageUp());
+$('#ageUpButton').click(e => updateHistory());
 
 function loadAgeSettings(currAge) {
 	//trigger questions
@@ -75,7 +77,6 @@ function loadQuestion(currAge) {
 
 		// 3. Add event handler
 		button.addEventListener ("click", function() {
-			// alert("did something");
 		  	let currActiveBtns = document.getElementsByClassName("active");
 		  	if (currActiveBtns.length > 0) {
 		  		currActiveBtns[0].className = currActiveBtns[0].className.replace(" active", "");
@@ -92,6 +93,7 @@ function updateHistory() {
 		alert("You must make a life decision before aging up!");
 	}
 	else {
+		ageUp();
 		let historyLine = document.createElement("P");
 		historyLine.innerHTML = currAge + " - " + currActiveBtn.innerHTML;
 
@@ -106,6 +108,22 @@ let deathTrigger = 0;
 loadQuestion(currAge);
 // function triggerDeath() {}
 
+//ALLOWS THE MAIN CHARACTER'S ELEMENTS TO BE CHANGED WHEN A SELECTION IS MADE IN THE PALETTE. ex. src of .skinPic is changed to the pic thst the src of #skinPicPrev is previewing
+$('.skinPicPrev').on('click',function(){
+	$('#' + $(this).attr("class").slice(0,-4)).attr('src', $(this).attr("src").slice(0,-8) + ".png");
+;})
+$('.hairPicPrev').on('click',function(){
+	$('#' + $(this).attr("class").slice(0,-4)).attr('src', $(this).attr("src").slice(0,-8) + ".png");
+;})
+$('.shoesPicPrev').on('click',function(){
+	$('#' + $(this).attr("class").slice(0,-4)).attr('src', $(this).attr("src").slice(0,-8) + ".png");
+;})
+$('.bottomPicPrev').on('click',function(){
+	$('#' + $(this).attr("class").slice(0,-4)).attr('src', $(this).attr("src").slice(0,-8) + ".png");
+;})
+$('.topPicPrev').on('click',function(){
+	$('#' + $(this).attr("class").slice(0,-4)).attr('src', $(this).attr("src").slice(0,-8) + ".png");
+;})
 
 
 

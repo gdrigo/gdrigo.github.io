@@ -1,7 +1,7 @@
 
 
 html {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Jost', sans-serif;
 
 }
 
@@ -13,7 +13,7 @@ body {
 
 .mainGrid {
 	display: grid;
-	grid-template-columns: 25vw 43vw 25vw;
+	grid-template-columns: 25vw 40vw 28vw;
 	grid-column-gap: 1vw;
 	border: 3px white;
 	padding-left: 2vw;
@@ -24,10 +24,23 @@ ul {
 	padding-left: 0;
 }
 
+#charNameAge {
+	display: flex;
+	font-size: 4vh;
+}
+
+#ageUpButton {
+	width: 10vw;
+	height: 6vh;
+	background-color: white;
+}
+
+
 .charClothes {
 	position: absolute;
 	bottom: 0;
 	margin-left: 5vw;
+	z-index: -1;
 }
 
 .box {
@@ -77,5 +90,20 @@ ul {
   color: white;
 }
 
+.selectionGrid {
+	display: grid;
+	grid-template-columns: 3vw 3vw 3vw;
+	grid-template-rows: 3vw;
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vw;
+}
 
+.hairSkinGrid {
+	grid-template-rows: 3vw 3vw;
+}
+
+.selectionGrid img {
+	width: 3vw;
+	height: 3vw;
+}
 
