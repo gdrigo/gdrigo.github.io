@@ -15,19 +15,17 @@ p {
 	opacity: 0.6;
 }
 
+video {
+	width: 65vw;
+	margin-left: 17vw;
+	margin-top:8vh;
 
-.audioPlayer {
-	position: absolute;
-	top:0;
-	left:0;
-	width: 59vw;
-	margin-left: 20vw;
-	margin-top:15vh;
 }
 
-#audioTag {
+
+.text {
 	width: 59vw;
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 @media(max-width: 1200px) {
