@@ -13,8 +13,6 @@ body {
 	grid-template-columns: 28vw 40vw 28vw;
 	grid-column-gap: 1vw;
 	border: 3px white;
-	/*padding-left: 2vw;
-	padding-right: 2vw;*/
 }
 
 p {
@@ -22,7 +20,6 @@ p {
 	text-align: center;
 	padding-left: 1vw;
 	font-size: 2vw;
-	/*opacity: 1;*/
 }
 
 video {
@@ -45,82 +42,77 @@ video {
 .para {
 	font-size: 1.5vw;
 }
-/*@media(max-width: 1200px) {
+@media (max-width: 1200px) {
  	p {
 		font-size: 3vh;
 	}
- 	.audioPlayer, #audioTag {
-		width: 30vw;
-	}
-	#audioTag {
-		opacity: 0.6;
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 20vw 60vw 20vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
 	}
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
  	p {
 		font-size: 3vh;
 	}
- 	.audioPlayer, #audioTag {
-		width: 50vw;
-	}
-	#audioTag {
-		opacity: 0.6;
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 20vw 60vw 20vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
 	}
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
  	p {
 		font-size: 3vh;
 	}
- 	.audioPlayer, #audioTag {
-		width: 50vw;
-	}
-	#audioTag {
-		opacity: 0.6;
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 20vw 60vw 20vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
 	}
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
  	p {
 		font-size: 3vh;
 	}
- 	.audioPlayer, #audioTag {
-		width: 50vw;
-	}
-	#audioTag {
-		opacity: 0.6;
-	}
-}
-
-
-@media(max-width: 500px) {
- 	p {
-		font-size: 3vh;
-	}
- 	.audioPlayer, #audioTag {
- 		margin-left: 30vw;
-		width: 53vw;
-	}
-	#audioTag {
-		margin-left: 0vw;
-		opacity: 0.6;
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 20vw 60vw 20vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
 	}
 }
 
 
-@media(max-width: 450px) {
+@media (max-width: 500px) {
+ 	p {
+		font-size: 3vh;
+	}
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 20vw 60vw 20vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
+	}
+}
+
+
+@media (max-width: 450px) {
 	p {
-		font-size: 3vh;
+		font-size: 4vh;
 	}
- 	.audioPlayer, #audioTag {
- 		margin-left: 20vw;
-		width: 60vw;
-	}
-	#audioTag {
-		margin-left: 0vw;
-		width: 65vw;
-		opacity: 0.6;
+	.mainGrid {
+	display: grid;
+	grid-template-columns: 10vw 80vw 10vw;
+	grid-column-gap: 3vw;
+	border: 3px white;
 	}
 }
 
@@ -128,4 +120,3 @@ video {
 
 
 
-*/
