@@ -1,5 +1,6 @@
 html {
-	font-family: 'Bungee', cursive;
+	font-family: 'Jost', sans-serif;
+	text-align: left;
 }
 
 body {
@@ -7,28 +8,44 @@ body {
 	background-color: #e0ba94;
 }
 
+.mainGrid {
+	display: grid;
+	grid-template-columns: 28vw 40vw 28vw;
+	grid-column-gap: 1vw;
+	border: 3px white;
+	/*padding-left: 2vw;
+	padding-right: 2vw;*/
+}
+
 p {
 	color: white;
 	text-align: center;
 	padding-left: 1vw;
 	font-size: 2vw;
-	opacity: 0.6;
+	/*opacity: 1;*/
 }
 
 video {
-	width: 65vw;
-	margin-left: 17vw;
-	margin-top:8vh;
+	width: 60vw;
+	margin-left: 20vw;
+	margin-top:3vh;
 
 }
 
+#title {
+	padding-bottom: 0;
+}
 
 .text {
-	width: 59vw;
+	width: 65vw;
 	opacity: 0.8;
+	margin-left: 17.5vw;
 }
 
-@media(max-width: 1200px) {
+.para {
+	font-size: 1.5vw;
+}
+/*@media(max-width: 1200px) {
  	p {
 		font-size: 3vh;
 	}
@@ -111,3 +128,4 @@ video {
 
 
 
+*/
