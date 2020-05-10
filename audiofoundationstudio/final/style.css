@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	background-color: #e0ba94;
+	background-color: #6699cc;
 }
 
 .mainGrid {
@@ -13,12 +13,15 @@ body {
 	border: 3px white;
 }
 
-p, h2 {
+h1 {
+	color: white;
+}
+
+p{
 	color: white;
 	text-align: center;
 	padding-left: 1vw;
-	font-size: 2.7vw;
-	opacity: 0.8;
+	font-size: 4vw;
 }
 
 video {
@@ -42,7 +45,7 @@ video {
 }
 
 @media (max-width: 1200px) {
-	h2, p, .text {
+	p, .text {
 		font-size: 3vw;
 	}
 
@@ -69,7 +72,7 @@ video {
 
 
 @media (max-width: 850px) {
-	h2, p, .text {
+	p, .text {
 		font-size: 3vw;
 	}
 
@@ -95,7 +98,7 @@ video {
 
 
 @media (max-width: 650px) {
-	h2, p, .text {
+	p, .text {
 		font-size: 3vw;
 	}
 
@@ -122,8 +125,8 @@ video {
 
 
 @media (max-width: 500px) {
-	h2, p, .text {
-		font-size: 3vw;
+	p, .text {
+		font-size: 3.5vw;
 	}
 
 	
