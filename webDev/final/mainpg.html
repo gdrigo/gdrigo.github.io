@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>It's Life!</title>
+    <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet">
+
+     <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="script.js" defer></script>
+   
+  </head>
+
+
+  <body>
+    <div id="mainContent">
+
+      <div class="mainGrid row">
+
+        <div class="leftCol">
+       
+          <div class="questionBox box">
+            <h1>Decisions, Decisions</h1>
+            <p id="question"></p>
+            <ul id="choices">
+              
+            </ul>
+          </div>
+
+          <div class="historyBox box">
+            <h1>History</h1>
+            <h2>Age</h2>
+            <ul id="historyList">
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="midCol">
+
+        	<div id="charNameAge">
+          		<h3 id="currName">Alex </h3><h3>-</h3><h3 id="currAge">0</h3>
+          		
+      		</div>
+          	<button id='ageUpButton'>AGE UP!</button>
+	        <div class="character">
+	        	<img class="charClothes" id="skinPic" src="assets/avatar/toddler/skin/4.png">
+	          	<img class="charClothes" id="hairPic" src="assets/avatar/toddler/hair/1.png">
+	          	<img class="charClothes" id="shoesPic" src="assets/avatar/toddler/shoes/3.png">
+	          	<img class="charClothes" id="bottomPic" src="assets/avatar/toddler/bottom/1.png">
+	          	<img class="charClothes" id="topPic" src="assets/avatar/toddler/top/1.png">
+	        </div>
+
+        </div>
+
+        <div class="rightCol">
+
+          	<div class="customLookBox box">
+            	<h1>Customize</h1>
+            	<div class="categories">
+              		<h2>Skin</h2>
+		            	<div class="selectionGrid hairSkinGrid">
+		            	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		            </div>
+
+              		<h2>Hair</h2>
+		            <div class="selectionGrid">
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<!-- <div><img class="hairPicPrev" src=""></div> -->
+		            </div>
+              
+		            <h2>Tops</h2>
+		            <div class="selectionGrid">
+		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/1prev.png"></div>
+		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/2prev.png"></div>
+		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/3prev.png"></div>
+		           	</div>
+              
+              		<h2>Bottoms</h2>
+              		<div class="selectionGrid">
+              			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/1prev.png"></div>
+              			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/2prev.png"></div>
+              			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/3prev.png"></div>
+              		</div>
+
+	              	<h2>Shoes</h2>
+	              	<div class="selectionGrid">
+	              		<div><img class="shoesPicPrev" src="assets/avatar/toddler/shoes/1prev.png"></div>
+	              		<div><img class="shoesPicPrev" src="assets/avatar/toddler/shoes/2prev.png"></div>
+	              		<div><img class="shoesPicPrev" src="assets/avatar/toddler/shoes/3prev.png"></div>
+	              	</div>
+   
+            </div>
+          </div>
+
+        </div>        
+
+      </div>
+
+      <div class="overlay">
+      </div>
+
+    </div>
+
+    
+    <!-- BOOTSTRAP LINKS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    
+  </body>
+
+</html>

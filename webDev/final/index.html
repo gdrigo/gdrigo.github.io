@@ -25,15 +25,15 @@
         <div class="leftCol">
        
           <div class="questionBox box">
-            <h1>Decisions, Decisions</h1>
+            <h1 class="title">Decisions, Decisions</h1>
             <p id="question"></p>
             <ul id="choices">
               
             </ul>
           </div>
 
-          <div class="historyBox box">
-            <h1>History</h1>
+          <div class="historyBox box" id="historyBox">
+            <h1 class="title">History</h1>
             <h2>Age</h2>
             <ul id="historyList">
             </ul>
@@ -43,9 +43,8 @@
 
         <div class="midCol">
 
-        	<div id="charNameAge">
-          		<h3 id="currName">Alex </h3><h3>-</h3><h3 id="currAge">0</h3>
-          		
+        	<div class="title" id="charNameAge">
+          	<h3 id="currName">Alex </h3><h3></h3><h3 id="currAge">0</h3> 		
       		</div>
           	<button id='ageUpButton'>AGE UP!</button>
 	        <div class="character">
@@ -61,43 +60,40 @@
         <div class="rightCol">
 
           	<div class="customLookBox box">
-            	<h1>Customize</h1>
+            	<h1 class="title">Customize</h1>
             	<div class="categories">
-              		<h2>Skin</h2>
+              		<h2 class="title">Skin</h2>
 		            	<div class="selectionGrid hairSkinGrid">
-		            	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/1prev.png"></div>
-		              	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/2prev.png"></div>
-		              	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/3prev.png"></div>
-		              	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/4prev.png"></div>
-		              	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/5prev.png"></div>
-		              	<div><img class="skinPicPrev" src="assets/avatar/toddler/skin/6prev.png"></div>
+		            	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
+		              	<div><img class="skinPicPrev" src=""></div>
 		            </div>
 
-              		<h2>Hair</h2>
+              		<h2 class="title">Hair</h2>
 		            <div class="selectionGrid">
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/1prev.png"></div>
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/2prev.png"></div>
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/3prev.png"></div>
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/4prev.png"></div>
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/5prev.png"></div>
-		              	<div><img class="hairPicPrev" src="assets/avatar/toddler/hair/6prev.png"></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
+		              	<div><img class="hairPicPrev" src=""></div>
 		            </div>
               
-		            <h2>Tops</h2>
+		            <h2 class="title">Tops</h2>
 		            <div class="selectionGrid">
 		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/1prev.png"></div>
 		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/2prev.png"></div>
 		              	<div><img class="topPicPrev" src="assets/avatar/toddler/top/3prev.png"></div>
 		           	</div>
               
-              		<h2>Bottoms</h2>
+              		<h2 class="title">Bottoms</h2>
               		<div class="selectionGrid">
               			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/1prev.png"></div>
               			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/2prev.png"></div>
               			<div><img class="bottomPicPrev" src="assets/avatar/toddler/bottom/3prev.png"></div>
               		</div>
 
-	              	<h2>Shoes</h2>
+	              	<h2 class="title">Shoes</h2>
 	              	<div class="selectionGrid">
 	              		<div><img class="shoesPicPrev" src="assets/avatar/toddler/shoes/1prev.png"></div>
 	              		<div><img class="shoesPicPrev" src="assets/avatar/toddler/shoes/2prev.png"></div>
@@ -109,6 +105,17 @@
 
         </div>        
 
+      </div>
+      <div id="overlay">
+        <div id="introCard">
+          <h1 class="title">It's Life!</h1>
+          <h3>You decide the life and fashion choices of your character as they grow up.</h3>
+          <h3>Before you begin, give them a name:</h3>
+          <button id="nameButton" onclick="getName()">Start</button>
+          <!-- <input type="text" id="nameInput" placeholder="  Enter Name Here" size="4"/> -->
+            <!-- <button id="nameButton" onclick="getName()">Start</button> -->
+            
+        </div>
       </div>
 
     </div>

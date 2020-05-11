@@ -7,13 +7,15 @@ html {
 
 body {
 	display: flex;
-	background-color: lightblue;
+	background-image: linear-gradient(to bottom right, #7F7FD5, #86A8E7, #91EAE4);
 	color: black;
+	height: 99vh;
 }
+
 
 .mainGrid {
 	display: grid;
-	grid-template-columns: 25vw 40vw 28vw;
+	grid-template-columns: 33vw 45vw 15vw;
 	grid-column-gap: 1vw;
 	border: 3px white;
 	padding-left: 2vw;
@@ -24,23 +26,61 @@ ul {
 	padding-left: 0;
 }
 
+
+
 #charNameAge {
 	display: flex;
-	font-size: 4vh;
+	font-size: 3.5vh;
+	background-color: white;
+	width: 20vw;
+	height: 8vh;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	margin-left: 10vw;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#currNameAge {
+	padding-top: 0.5vh;
+	/*padding-top: -0.10vh;*/
+}
+
+#currName, #currAge {
+	margin-top: 0.5vh;
+	margin-left: 5vw;
 }
 
 #ageUpButton {
 	width: 10vw;
 	height: 6vh;
 	background-color: white;
+	border-radius: 15px;
+	border-color: white;
+	margin-top: 2vh;
+	margin-left: 15vw;
+	font-size: 2.5vh;
+}
+
+#ageUpButton:hover {
+	background-color: #65659c;
+	color: white;
+}
+
+#ageUpButton:active {
+	color: white;
+	background-color: #65659c;
+	/*box-shadow: 0 5px #666;*/
+	transform: translateY(4px);
 }
 
 
 .charClothes {
 	position: absolute;
 	bottom: 0;
-	margin-left: 5vw;
+	margin-left: 11vw;
 	z-index: -1;
+	height: 80vh;
 }
 
 .box {
@@ -52,10 +92,7 @@ ul {
 	padding-right: 2vw;
 	margin-top: 5vh;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.questionBox {
-	
+	/*color: white;*/
 }
 
 .historyBox {
@@ -69,7 +106,7 @@ ul {
 
 #choices button {
 	display: block;
-	width: 20vw;
+	width: 26vw;
 }
 
 
@@ -86,7 +123,7 @@ ul {
 
 /* Style the active class, and buttons on mouse-over */
 .active, .choiceBtn:hover {
-  background-color: #666;
+  background-color: #7F7FD5;
   color: white;
 }
 
@@ -107,3 +144,73 @@ ul {
 	height: 3vw;
 }
 
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 99vw;
+	height: 99vh;
+	z-index: 1;
+	background-image: linear-gradient(to bottom right, #7F7FD5, #86A8E7, #91EAE4);
+	/*color: white;*/
+}
+
+#introCard {
+	background-color: white;
+	text-align: center;
+	width: 65vw;
+	height: 42vh;
+	border-radius: 15px;
+	margin-top: 28vh;
+	margin-left: 17.5vw;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#introCard h1 {
+	font-size: 6vh;
+	padding-top: 4vh;
+}
+
+#introCard h3 {
+	font-size: 3vh;
+}
+
+input {
+	height: 5vh;
+	width: 30vw;
+	/*border-radius: 25px;*/
+}
+
+#nameInput {
+	font-size: 1.5vw;
+	border-radius: 25px;
+}
+
+#nameButton  {
+	height: 5vh;
+	width: 12vh;
+	border-radius: 25px;
+	/*padding-top: 1vh;*/
+	margin-top: -1.1vh;
+	vertical-align: middle;
+	font-size: 1.5vw;
+	color: white;
+	background-color: #7F7FD5;
+
+}
+
+#nameButton:hover {
+	background-color: #65659c;
+	color: white;
+}
+
+#nameButton:active {
+	color: white;
+	background-color: #65659c;
+	/*box-shadow: 0 5px #666;*/
+	transform: translateY(4px);
+}
+
+.title {
+	color: #65659c;
+}

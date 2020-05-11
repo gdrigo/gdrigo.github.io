@@ -1,3 +1,5 @@
+
+
 //AGE MANAGEMENT
 
 //most important object.  Hold all the attributes associated with an age(actual age, availabe outfits, look, etc)
@@ -10,35 +12,32 @@ function Age(ageNum, stageOfLife, question, choices = []) {
 
 //Setting ages
 let ages = [];
-ages.push(new Age(0, "Baby", "insertQuestioninsertQuestioninsertQuestion?", ["Choice1","Choice2","Choice3"]));
-ages.push(new Age(3, "Toddler", "insertQuestioninsertQuestion?", ["choice1","choice2","choice3"]));
-ages.push(new Age(7, "Child", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(10, "Child", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(13, "Teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(16, "Teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(18, "Teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(21, "Young Adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(25, "Adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(35, "Adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(45, "Adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(55, "Adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(65, "Elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(75, "Elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(85, "Elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(103, "Elder", "insertQuestion", ["choice1","choice2","choice3"]));
+// ages.push(new Age(0, "baby", "QuestionZeroQuestionZeroQuestionZeroQuestionZeroQuestionZero", ["Choice1","Choice2","Choice3"]));
+ages.push(new Age(3, "toddler", "insertQuestioninsertQuestion?", ["choice1","choice2","choice3"]));
+ages.push(new Age(7, "child", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(10, "child", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(13, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(16, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(18, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(21, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(25, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(35, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(45, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(55, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(65, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(75, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(85, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(103, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
 
 let currAgeInd = 0;
 let currAge = ages[0].ageNum;
 
 function ageUp() {
-	// updateHistory();
 	currAgeInd++;
-	currAge = ages[currAgeInd].ageNum; //updates age
 
 	if(currAgeInd < ages.length) { //there's still possible ages to live 
-		loadAgeSettings(currAge); //updates next question (changes customizable options)
-		$('#currAge').text(" " + currAge);
-		// updateHistory();
+		loadAgeSettings(currAgeInd); //updates next question and changes customizable options
+		$('#currAge').text(" " + ages[currAgeInd].ageNum);
 	}
 	else { //kill them! hehehe
 		triggerDeath();
@@ -47,14 +46,20 @@ function ageUp() {
 
 $('#ageUpButton').click(e => updateHistory());
 
-function loadAgeSettings(currAge) {
+function loadAgeSettings(currAgeInd) {
 	//trigger questions
-	loadQuestion(currAge);
-	//changes customizable options
+	loadQuestion(currAgeInd);
+	//changes customizable options if charater enters new stage in life
+	if(currAgeInd != 0 && (ages[currAgeInd].stageOfLife != ages[currAgeInd-1].stageOfLife)) {
+		loadImages(ages[currAgeInd].stageOfLife);
+	}
+	else if (currAgeInd == 0) { //for first stage
+		loadImages(ages[0].stageOfLife);
+	}
 }
 
-let questions = [];
-function loadQuestion(currAge) {
+// let questions = [];
+function loadQuestion(currAgeInd) {
 	//changes the text of the #question p tag, clears out the buttons from the #choices and adds new ones for eahc choice
 
 	//change #question text
@@ -85,6 +90,30 @@ function loadQuestion(currAge) {
 		});
 	}
 
+}
+
+function loadImages(lifeStage) { //loads pics of custom tab. lifestages:toddler, child, teen, young adult, adult, elder
+	//load skin
+	for (let i=0; i<6; i++) {
+		$('.skinPicPrev')[i].src = 'assets/avatar/'+lifeStage+'/skin/' + (i+1) + 'prev.png';
+	}
+	//load hair
+	for (let i=0; i<3; i++) {
+		$('.hairPicPrev')[i].src = 'assets/avatar/'+lifeStage+'/hair/' + (i+1) + 'prev.png';
+	}
+	//load tops, bottoms, shoes
+	for (let i=0; i<3; i++) {
+		$('.topPicPrev')[i].src = 'assets/avatar/'+lifeStage+'/top/' + (i+1) + 'prev.png';
+		$('.bottomPicPrev')[i].src = 'assets/avatar/'+lifeStage+'/bottom/' + (i+1) + 'prev.png';
+		$('.shoesPicPrev')[i].src = 'assets/avatar/'+lifeStage+'/shoes/' + (i+1) + 'prev.png';
+	}
+
+	//load character default outfit
+	$('#skinPic').attr('src', 'assets/avatar/'+lifeStage+'/skin/4.png');
+	$('#hairPic').attr('src', 'assets/avatar/'+lifeStage+'/hair/1.png');
+	$('#shoesPic').attr('src', 'assets/avatar/'+lifeStage+'/shoes/3.png');
+	$('#bottomPic').attr('src', 'assets/avatar/'+lifeStage+'/bottom/1.png');
+	$('#topPic').attr('src', 'assets/avatar/'+lifeStage+'/top/1.png');
 }	
 
 function updateHistory() {
@@ -95,18 +124,26 @@ function updateHistory() {
 	else {
 		ageUp();
 		let historyLine = document.createElement("P");
-		historyLine.innerHTML = currAge + " - " + currActiveBtn.innerHTML;
+		historyLine.innerHTML = ages[currAgeInd-1].ageNum + " - " + currActiveBtn.innerHTML;
 
 		let histLst = document.getElementById('historyList');
 		histLst.appendChild(historyLine);
-	}
-			
+	}	
 }
 
-let deathTrigger = 0;
+function triggerDeath() {
+	$('.questionBox').remove();
+	$('.customLookBox').remove();
+	$('#ageUpButton').remove();
+	// document.getElementById("historyBox").style.height = "95vh";
+	$('#historyBox').height('85vh');
 
-loadQuestion(currAge);
-// function triggerDeath() {}
+
+}
+
+
+loadAgeSettings(0);
+
 
 //ALLOWS THE MAIN CHARACTER'S ELEMENTS TO BE CHANGED WHEN A SELECTION IS MADE IN THE PALETTE. ex. src of .skinPic is changed to the pic thst the src of #skinPicPrev is previewing
 $('.skinPicPrev').on('click',function(){
@@ -126,4 +163,47 @@ $('.topPicPrev').on('click',function(){
 ;})
 
 
+let name = "";
+
+function getName() {
+	// name = document.getElementById('nameInput').value;
+	homepageAnimations(0); 
+}
+
+ // $('#mainContent').siblings().hide();
+// $('#mainContent').parents().siblings().hide()
+
+// executed when disc on homepage is clicked
+function homepageAnimations() {
+  //fade out disc and white background
+  // let disc = document.getElementById("homepageDisc");
+  let overlay = document.getElementById("overlay");
+  let card = document.getElementById("introCard");
+  
+  //fades out disc on homepage
+  let fadeCard = setInterval(function () {
+        if (!card.style.opacity) {
+            card.style.opacity = 1;
+          }
+        if (card.style.opacity > 0) {
+            card.style.opacity -= 0.01;
+        } else {
+            clearInterval(fadeCard);
+        }
+    }, 5);
+
+  //fades out white overalay on homepage
+  let fadeOverlay = setInterval(function () {
+        if (!overlay.style.opacity) {
+            overlay.style.opacity = 1;
+        }
+        if (overlay.style.opacity > 0) {
+            overlay.style.opacity -= 0.01;
+        } else {
+            clearInterval(fadeOverlay);
+        }
+    }, 20);
+  //adapted from code on https://stackoverflow.com/questions/2060539/javascript-fade-element-from-specidied-opacity-to-specified-opacity?noredirect=1&lq=1
+  setTimeout(function(){ $('#overlay').remove(); }, 3000);
+}
 
