@@ -135,7 +135,8 @@ function triggerDeath() {
 	$('#ageUpButton').remove();
 	// document.getElementById("historyBox").style.height = "95vh";
 	$('#historyBox').height('85vh');
-
+	// $('.rightCol').append(<div class="deathNoteBox box">)
+	$("#dNB").css("visibility", "visible");
 
 }
 

@@ -214,3 +214,11 @@ input {
 .title {
 	color: #65659c;
 }
+
+#dNB {
+	position: absolute;
+	right: 3vw;
+	top: 3vh;
+	width: 20vw;
+	visibility: hidden;
+}
