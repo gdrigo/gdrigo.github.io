@@ -13,21 +13,19 @@ function Age(ageNum, stageOfLife, question, choices = []) {
 //Setting ages
 let ages = [];
 // ages.push(new Age(0, "baby", "QuestionZeroQuestionZeroQuestionZeroQuestionZeroQuestionZero", ["Choice1","Choice2","Choice3"]));
-ages.push(new Age(3, "toddler", "insertQuestioninsertQuestion?", ["choice1","choice2","choice3"]));
-ages.push(new Age(7, "child", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(10, "child", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(13, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(16, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(18, "teen", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(21, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(25, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(35, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(45, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(55, "adult", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(65, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(75, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(85, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
-ages.push(new Age(103, "elder", "insertQuestion", ["choice1","choice2","choice3"]));
+ages.push(new Age(3, "toddler", "Your vegan parent is trying to feed you mashed avocado. What will you do?", ["Cry","Eat It","Slap the Spoon"]));
+ages.push(new Age(7, "child", "The school bully tries to tackle you. What do you do?", ["Tell a Teacher","Fight Back","Thanos Snap Them"]));
+ages.push(new Age(10, "child", "Your science teacher introduces the basic physics concepts to you. What do you do?", ["I'm basically Isaac Newton","Yeah, I get it","Huh?"]));
+ages.push(new Age(13, "teen", "You're about to have your first kiss with a kid named...Alex?! What do you do? ", ["KISS THEM","Um ew","Alex is MY name, NO WAY!"]));
+ages.push(new Age(16, "teen", "What high school clique do you join?", ["Geeks!","Jocks","Goths"]));
+ages.push(new Age(18, "teen", "It's time to figure out your post high school plans. What do you do?", ["Apply to college","Take a gap year","I'll figure it out"]));
+ages.push(new Age(21, "adult", "You're 21! What do you do?", ["You know ;)","Age is just a number","Goin' Clubbin'"]));
+ages.push(new Age(25, "adult", "It's time to choose your career field!", ["Architecture","Computer Science","Graphic Design"]));
+ages.push(new Age(35, "adult", "You just had a baby boy. What do you name him?", ["Greg!","Alex Jr","X Æ A-12"]));
+ages.push(new Age(55, "adult", "Your hair is receding. What do you do?", ["C'est la vie","My hair isn't receding(I'm in denial)","Change my wig over there --->>"]));
+ages.push(new Age(65, "elder", "You're at that age! What do you do?", ["Finally Retire!","Age is just a number","I love what I do so I'm gonna keep working!"]));
+ages.push(new Age(85, "elder", "What do you wanna do today?", ["Go to the library","Hang with my grandkids","Run a marathon!"]));
+ages.push(new Age(103, "elder", "You're getting pretty old. How are you feeling?", ["Never felt better!","A feel fine","..........."]));
 
 let currAgeInd = 0;
 let currAge = ages[0].ageNum;
